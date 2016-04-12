@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 /**
  *
@@ -41,5 +42,15 @@ public class EmployeeTest {
         employees2.put("2", e2);
         employees2.put("3", e3);
         employees2.put("4", e4);
+        
+        Set<Employee> set = new TreeSet<Employee>();
+        set.add(e1);
+        set.add(e2);
+        set.add(e3);
+        set.add(e4);
+        
+        for(Employee e : set) {
+            System.out.println(e);
+        }
 }
 }
