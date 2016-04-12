@@ -50,32 +50,16 @@ public class Employee implements Comparable {
         return hash;
     }
 
-
+    
+    @Override
     public int compareTo(Object other) {
         
         Employee o = (Employee)other;
         
         return new CompareToBuilder()
-               .append(this.empID, o.empID)
+               .append(this.ssn, o.ssn)
                .toComparison();
-//        // NO Magic numbers! Use constants for readability!
-//        final int BEFORE = -1;
-//	final int EQUAL = 0;
-//	final int AFTER = 1;
-//
-//        Employee e = (Employee)other;
-//
-//        if(this.equals(e)) return EQUAL;
-////
-////        if(this.empID > e.empID) return BEFORE;
-////        if(this.empID < e.empID) return AFTER;
-//
-//        // The String class already has a compareTo implementation, so
-//        // just use that.
-//        int comparison = this.ssn.compareTo(e.getSsn());
-//        if( comparison != EQUAL) return comparison;
-//
-//        return EQUAL; // default
+//     
     }
 
     public String getSsn() {
