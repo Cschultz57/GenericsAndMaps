@@ -26,23 +26,32 @@ public class EmployeeTest {
         
         Map <String, Employee> employees = new HashMap<>(); 
         //.put needs a key and the value as inputs
-        employees.put("1", e1);
-        employees.put("2", e2);
-        employees.put("3", e3);
-        employees.put("4", e4);
+        employees.put(e1.getSsn(), e1);
+        employees.put(e2.getSsn(), e2);
+        employees.put(e3.getSsn(), e3);
+        employees.put(e4.getSsn(), e4);
                 //run a loop through a map using a key
         Set<String> keys = employees.keySet();
         for(String key : keys){
             Employee e = employees.get(key);
             System.out.println(e);
         }
+       
+        Employee retrieved = employees.get("222-22-2222");
+           System.out.println(retrieved);
+        
         Map <String, Employee> employees2 = new TreeMap<>(); 
         //.put needs a key and the value as inputs
-        employees2.put("1", e1);
-        employees2.put("2", e2);
-        employees2.put("3", e3);
-        employees2.put("4", e4);
+        employees2.put(e1.getSsn(), e1);
+        employees2.put(e2.getSsn(), e2);
+        employees2.put(e3.getSsn(), e3);
+        employees2.put(e4.getSsn(), e4);
         
+        Set<String> keys2 = employees.keySet();
+        for(String key : keys2){
+            Employee e = employees.get(key);
+            System.out.println(e);
+        }
         Set<Employee> set = new TreeSet<Employee>();
         set.add(e1);
         set.add(e2);
